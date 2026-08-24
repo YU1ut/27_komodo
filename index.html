@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="一站式规划科莫多航班、住宿、潜水与跳岛体验。"
+    />
+    <title>Komodo Plan · 你的科莫多旅行</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="i-logo" viewBox="0 0 32 32">
+        <path d="M16 3.5c-4.6 0-8.3 3.7-8.3 8.3 0 6.4 8.3 16.7 8.3 16.7s8.3-10.3 8.3-16.7c0-4.6-3.7-8.3-8.3-8.3Z" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <path d="M10.5 14.2c2.4-3.2 8.9-3.3 11.2.1M12.1 18c2.2-1.6 5.8-1.6 7.9 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="16" cy="10.2" r="1.7" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3c2.6 2.5 3.8 5.5 3.8 9S14.6 18.5 12 21c-2.6-2.5-3.8-5.5-3.8-9S9.4 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 8h14M5 12h14M5 16h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-7.1 7-12a7 7 0 1 0-14 0c0 4.9 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 3.5v4M16.5 3.5v4M3.5 10h17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19v-1.5A5.5 5.5 0 0 1 9 12h0a5.5 5.5 0 0 1 5.5 5.5V19M16 5.5a3 3 0 0 1 0 5.8M17 13a5.4 5.4 0 0 1 3.5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path d="m21 15-8-3V5.5a2 2 0 0 0-4 0V12l-6 3v2l6-1.2V19l-2 1.5V22l4-1 4 1v-1.5L13 19v-3.2l8 1.2v-2Z" fill="currentColor"/></symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 5v15M21 11v9M3 17h18M6 13V8h5a3 3 0 0 1 3 3v2M14 13v-2h3a4 4 0 0 1 4 4v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 9c3.5 0 3.5 2.5 7 2.5S13.5 9 17 9s3.5 2.5 7 2.5M3 14c3.5 0 3.5 2.5 7 2.5S13.5 14 17 14s3.5 2.5 7 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+      <symbol id="i-walk" viewBox="0 0 24 24"><circle cx="13" cy="4.5" r="2" fill="currentColor"/><path d="m10 21 2-6-2.2-2.8L7.5 16 5 14.5l4-6 3-1 3.5 3 3.5 1.5-.8 2-3.8-1.5-1.2-1 2 3.2 1 6.3h-2.4l-1.4-4.6L12 21h-2Z" fill="currentColor"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.2c0 5-8.8 10.4-8.8 10.4S3.2 13.2 3.2 8.2A4.7 4.7 0 0 1 12 5.9a4.7 4.7 0 0 1 8.8 2.3Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="i-edit" viewBox="0 0 24 24"><path d="m14 5 5 5M4 20l3.3-.7L19 7.6a2.1 2.1 0 0 0-3-3L4.7 16 4 20Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4V6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 8.5v7" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Komodo Plan 首页">
+          <svg><use href="#i-logo"></use></svg>
+          <span>KOMODO <b>PLAN</b></span>
+        </a>
+        <nav class="product-nav" aria-label="主要导航">
+          <a class="nav-product active" href="#itinerary"><span class="nav-emoji">🧭</span>每日行程</a>
+          <a class="nav-product" href="#flights"><span class="nav-emoji">✈️</span>航班详情</a>
+          <a class="nav-product" href="#bookings"><span class="nav-emoji">🏡</span>住宿预订</a>
+        </nav>
+        <div class="header-actions">
+          <span class="confirmed-header"><i></i>行程已确认</span>
+          <button class="round-button" type="button" aria-label="选择语言"><svg><use href="#i-globe"></use></svg></button>
+          <button class="account-button" type="button" aria-label="打开菜单"><svg><use href="#i-menu"></use></svg><span class="avatar">Y</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff5ec"/><stop offset="1" stop-color="#fddfdc"/></linearGradient>
+              <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#bcebf0"/><stop offset="1" stop-color="#81d6dd"/></linearGradient>
+            </defs>
+            <rect width="1440" height="420" fill="url(#sky)"/>
+            <circle cx="1160" cy="90" r="50" fill="#ffb36d" opacity=".72"/>
+            <path d="M0 245c160-70 260-22 392-47 135-26 176-105 317-49 124 49 188 20 284-10 148-46 250 0 447 50v231H0Z" fill="#2e887a"/>
+            <path d="M0 270c159-26 274 23 422-4 121-22 201-84 330-39 141 50 238-32 376-28 114 3 197 30 312 61v160H0Z" fill="#7db7a3"/>
+            <path d="M0 304c184 23 312-22 476 3 158 25 261 5 402-13 192-24 316 28 562 0v126H0Z" fill="url(#sea)"/>
+            <path d="M610 113c25-16 53-14 74 6M636 107c-3-17 7-28 18-36" fill="none" stroke="#ff385c" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+            <path d="M102 350c70 10 130 10 200 0M880 335c78 10 150 9 228-2M1240 370c55 6 102 5 154-2" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+          </svg>
+        </div>
+        <div class="hero-content">
+          <div class="eyebrow"><span>行程已确认</span> 预订编号 KMD-270428</div>
+          <h1 id="hero-title">科莫多沉浸之旅</h1>
+          <p>2027.04.26 — 05.10 · 东京往返 · 2 位持证潜水员</p>
+        </div>
+        <div class="trip-ticket" aria-label="已确认行程信息">
+          <div class="ticket-segment route-segment"><svg><use href="#i-plane"></use></svg><span><b>东京 HND ↔ 科莫多 LBJ</b><small>4/26–27 去程 · 5/9–10 返程</small></span></div>
+          <a class="ticket-segment" href="https://dragondivekomodo.com/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-wave"></use></svg><span><b>Dragon Dive Komodo ↗</b><small>4/27–5/5 · 8 晚 · 18 潜</small></span></a>
+          <a class="ticket-segment" href="https://www.komodoresort.com/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-bed"></use></svg><span><b>Komodo Resort ↗</b><small>5/5–5/8 · 3 晚</small></span></a>
+          <a class="ticket-segment" href="https://www.sudamalaresorts.com/resort/sudamala-resort-komodo/" target="_blank" rel="noopener noreferrer"><svg><use href="#i-bed"></use></svg><span><b>Sudamala Resort ↗</b><small>5/8–5/9 · 1 晚</small></span></a>
+        </div>
+      </section>
+
+      <section class="trip-status page-width" aria-label="当前旅行概要">
+        <div class="status-intro">
+          <span class="status-icon"><svg><use href="#i-check"></use></svg></span>
+          <div><b>完整旅行时间线已按 PDF、截图和你的确认合并</b><small>潜水逐日潜点仍以 Dragon Dive Komodo 最终通知为准</small></div>
+        </div>
+        <div class="status-facts">
+          <span><b>15 天 14 夜</b><small>东京往返</small></span>
+          <span><b>12 晚住宿</b><small>三家酒店</small></span>
+          <span><b>6 天 · 18 潜</b><small>潜水套餐</small></span>
+        </div>
+      </section>
+
+      <div class="page-width planner-layout">
+        <section class="itinerary-section" id="itinerary">
+          <div class="section-heading">
+            <div><span class="section-kicker">FULL TRIP TIMELINE</span><h2>4月26日–5月10日详细行程</h2><p>从东京出发、三段住宿到返程抵达，按日期完整排列。</p></div>
+          </div>
+          <div class="day-tabs" id="day-tabs" role="tablist" aria-label="按日期筛选"></div>
+          <div class="timeline" id="timeline" aria-live="polite"></div>
+        </section>
+
+        <aside class="summary-card" aria-labelledby="summary-title">
+          <div class="summary-top">
+            <div><span class="mini-badge">后段住宿按最低价估算</span><h2 id="summary-title">行程摘要</h2></div>
+            <span class="summary-check"><svg><use href="#i-check"></use></svg></span>
+          </div>
+          <div class="summary-meta">
+            <div><svg><use href="#i-calendar"></use></svg><span><b>2027年4月26日 — 5月10日</b><small>15 天 14 夜</small></span></div>
+            <div><svg><use href="#i-users"></use></svg><span><b>2 位成人</b><small>2 位持证潜水员</small></span></div>
+          </div>
+          <div class="confirmed-list">
+            <div><span><svg><use href="#i-plane"></use></svg>东京 ↔ 科莫多 · 2人</span><b>¥376,900</b></div>
+            <div><span><svg><use href="#i-wave"></use></svg>Dragon Dive Komodo</span><b>8 晚 · 18 潜</b></div>
+            <div><span><svg><use href="#i-bed"></use></svg>Komodo Resort · Room Only</span><b>IDR 10.125.000</b></div>
+            <div><span><svg><use href="#i-bed"></use></svg>Sudamala · Bed & Breakfast</span><b>IDR 4.053.563</b></div>
+          </div>
+          <div class="total-stack"><div class="total-row airfare-total"><span>往返机票 · 2人<small>2 × ¥188,450</small></span><b>¥376,900</b></div><div class="total-row"><span>住宿与潜水<small>IDR 54.116.093 × 0.0092</small></span><b>约 ¥497,868</b></div><div class="total-row grand-total"><span>日元预估总价<small>含机票、住宿与潜水</small></span><b>约 ¥874,800</b></div></div>
+          <button class="primary-button full" type="button" data-open-bookings>查看全部预订 <svg><use href="#i-arrow"></use></svg></button>
+          <p class="summary-note"><svg><use href="#i-check"></use></svg>预订编号 KMD-270428</p>
+        </aside>
+      </div>
+
+      <section class="flight-details-section" id="flights">
+        <div class="page-width">
+          <div class="section-heading compact"><div><span class="section-kicker">ROUND-TRIP FLIGHTS</span><h2>往返航班详情</h2><p>Singapore Airlines 联程，新加坡转机，行李直达。</p></div><div class="fare-pill"><small>2人往返</small><b>¥376,900</b></div></div>
+          <div class="flight-detail-grid">
+            <article class="flight-direction-card">
+              <div class="flight-card-head"><span>去程</span><div><b>4月26日–27日</b><small>总时长 19小时35分</small></div></div>
+              <div class="flight-leg"><time>22:55</time><i></i><div><b>HND 东京羽田 T3</b><small>SQ635 · Boeing 787 · 7小时30分</small></div></div>
+              <div class="flight-leg"><time>05:25</time><i></i><div><b>SIN 新加坡樟宜</b><small class="transfer-note">转机 8小时45分 · 不同航站楼 · 行李直达</small></div></div>
+              <div class="flight-leg"><time>14:10</time><i></i><div><b>SIN 樟宜 T1</b><small>SQ8452 · 实际 Scoot TR292 · Embraer 190-E2</small></div></div>
+              <div class="flight-leg destination"><time>17:30</time><i></i><div><b>LBJ 拉布安巴焦</b><small>飞行 3小时20分</small></div></div>
+            </article>
+            <article class="flight-direction-card">
+              <div class="flight-card-head return"><span>返程</span><div><b>5月9日–10日</b><small>总时长 12小时50分</small></div></div>
+              <div class="flight-leg"><time>16:55</time><i></i><div><b>LBJ 拉布安巴焦</b><small>SQ8659 · 实际 Scoot TR291 · Embraer 190-E2</small></div></div>
+              <div class="flight-leg"><time>20:25</time><i></i><div><b>SIN 新加坡樟宜 T1</b><small class="transfer-note">转机 2小时25分 · 不同航站楼 · 行李直达</small></div></div>
+              <div class="flight-leg"><time>22:50</time><i></i><div><b>SIN 新加坡樟宜 T2</b><small>SQ636 · Boeing 777-300ER · 6小时55分</small></div></div>
+              <div class="flight-leg destination"><time>06:45</time><i></i><div><b>HND 东京羽田 T3</b><small>5月10日抵达</small></div></div>
+            </article>
+          </div>
+          <p class="flight-source-note">航段依据 IMG_8541.PNG；票价沿用日文机票截图 ¥188,450/人。</p>
+        </div>
+      </section>
+
+      <section class="recommendations" id="bookings">
+        <div class="page-width">
+          <div class="section-heading compact">
+            <div><span class="section-kicker">TRIP BOOKINGS</span><h2>航班与住宿安排</h2><p>四段预订按时间顺序汇总，并附上三家官网。</p></div>
+          </div>
+          <div class="recommendation-grid booking-grid">
+            <article class="recommendation-card">
+              <div class="card-visual flight-visual"><span class="visual-badge confirmed-badge">✓ 截图已确认</span><div class="flight-route"><div><b>HND</b><small>东京</small></div><span><i></i><svg><use href="#i-plane"></use></svg><i></i></span><div><b>LBJ</b><small>科莫多</small></div></div><p>Singapore Airlines · 新加坡转机</p></div>
+              <div class="card-body"><div><span class="card-type">往返航班 · 2 人</span><span class="booking-ref">HND / LBJ</span></div><h3>东京往返拉布安巴焦</h3><p>4/26 22:55 出发 · 4/27 17:30 抵达<br />5/9 16:55 出发 · 5/10 06:45 抵达</p><div class="card-footer"><strong>¥376,900 <small>· ¥188,450/人</small></strong><button class="detail-button" data-open-bookings type="button">查看详情</button></div></div>
+            </article>
+            <article class="recommendation-card">
+              <div class="card-visual dive-visual"><span class="visual-badge confirmed-badge">✓ PDF 已确认</span><svg><use href="#i-wave"></use></svg><div><b>18 DIVES</b><small>DRAGON DIVE KOMODO</small></div></div>
+              <div class="card-body"><div><span class="card-type">4/27–5/5 · 8 晚</span><span class="booking-ref">8D/7N + 1N</span></div><h3>Dragon Dive Komodo</h3><p>Double Deluxe Pool Side · 6个潜水日</p><div class="card-footer"><strong>IDR 39.937.530</strong><a class="official-link" href="https://dragondivekomodo.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a></div></div>
+            </article>
+            <article class="recommendation-card" id="stays">
+              <div class="card-visual image-visual"><img src="assets/hilltop-sunrise.png" alt="山坡上的度假村独栋客房" /><span class="visual-badge estimate-badge">日期确认 · 价格估算</span></div>
+              <div class="card-body"><div><span class="card-type">5/5–5/8 · 3 晚</span><span class="booking-ref estimate-ref">最低价估算</span></div><h3>Komodo Resort</h3><p>Hilltop Sunrise · Room Only</p><div class="card-footer"><strong>IDR 10.125.000</strong><a class="official-link" href="https://www.komodoresort.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a></div></div>
+            </article>
+            <article class="recommendation-card">
+              <div class="card-visual image-visual"><img src="assets/beach-bungalow.png" alt="Sudamala Resort Komodo Beach Bungalow" /><span class="visual-badge estimate-badge">日期确认 · 价格估算</span></div>
+              <div class="card-body"><div><span class="card-type">5/8–5/9 · 1 晚</span><span class="booking-ref estimate-ref">最低适用价</span></div><h3>Sudamala Resort Komodo</h3><p>Beach Bungalow · Bed & Breakfast</p><div class="card-footer"><strong>IDR 4.053.563</strong><a class="official-link" href="https://www.sudamalaresorts.com/resort/sudamala-resort-komodo/" target="_blank" rel="noopener noreferrer">官网 ↗</a></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="trip-notes" id="trip-notes">
+        <div class="page-width notes-grid"><div><span class="section-kicker">PRICE BASIS</span><h2>估价依据</h2><p>统一换算为日元，汇率变化时总价也会变化。</p></div><article><span>01</span><div><b>往返机票</b><p>截图显示 ¥188,450/人；2人合计 ¥376,900。</p></div></article><article><span>02</span><div><b>IDR费用换算</b><p>IDR 54.116.093 按 1 IDR ≈ ¥0.0092，约为 ¥497,868。</p></div></article><article><span>03</span><div><b>日元预估总价</b><p>机票与住宿潜水合计约 ¥874,800；不含汇率波动和其他消费。</p></div></article></div>
+      </section>
+    </main>
+
+    <div class="mobile-checkout" aria-label="移动端行程总计">
+      <div><small>日元预估总价</small><b>约 ¥874,800</b></div>
+      <button type="button" data-open-bookings>预订清单</button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="page-width"><a class="brand footer-brand" href="#top"><svg><use href="#i-logo"></use></svg><span>KOMODO <b>PLAN</b></span></a><p>2027年4月26日–5月10日 · 东京往返</p><div class="footer-links"><a href="#itinerary">每日行程</a><a href="#bookings">预订信息</a><a href="#trip-notes">资料边界</a></div><small>© 2026 Komodo Plan · 行程编号 KMD-270428</small></div>
+    </footer>
+
+    <dialog class="booking-dialog" id="booking-dialog">
+      <div class="booking-shell">
+        <button class="round-button booking-close" type="button" aria-label="关闭预订清单"><svg><use href="#i-close"></use></svg></button>
+        <div class="success-mark"><svg><use href="#i-check"></use></svg></div>
+        <span class="section-kicker">CONFIRMED · KMD-270428</span>
+        <h2>旅行预订汇总</h2>
+        <p>2027年4月26日 — 5月10日 · 2 位持证潜水员</p>
+        <div class="booking-detail-list"><div><svg><use href="#i-plane"></use></svg><span><b>SQ635 + SQ8452 / TR292</b><small>4/26 22:55 HND → 4/27 17:30 LBJ</small></span><em>去程</em></div><div><svg><use href="#i-plane"></use></svg><span><b>SQ8659 / TR291 + SQ636</b><small>5/9 16:55 LBJ → 5/10 06:45 HND</small></span><em>返程</em></div><div><svg><use href="#i-wave"></use></svg><span><b>Dragon Dive Komodo</b><small>4/27–5/5 · 8 晚 · IDR 39.937.530</small></span><em>已确认</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Komodo Resort · Room Only</b><small>5/5–5/8 · 3 晚 · IDR 10.125.000</small></span><em class="estimate">估算</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Sudamala · Bed & Breakfast</b><small>5/8–5/9 · 1 晚 · IDR 4.053.563</small></span><em class="estimate">估算</em></div><div><svg><use href="#i-ticket"></use></svg><span><b>日元预估总价</b><small>按 1 IDR ≈ ¥0.0092 换算</small></span><em>约 ¥874,800</em></div></div>
+        <button class="primary-button full booking-done" type="button">返回行程</button>
+      </div>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
