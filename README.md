@@ -16,6 +16,7 @@ python3 -m http.server 4173
 - 按日期查看 15 天完整行程与航班时间
 - 查看 SQ631、SQ8452、SQ8659、SQ636 的航站楼、机型、舱等与转机时长
 - 查看 Dragon Dive Komodo、Komodo Resort 和 Sudamala Resort Seraya 三段确认住宿
+- 追踪 Dragon Dive 50% 已付与抵达前待付余款
 - 从住宿卡片或每日行程直接打开三家官网
 - 展示 Komodo Resort Hilltop Sunset Full-Board 与 Sudamala Beach Bungalow B&B 的确认价格
 - 打开完整预订清单

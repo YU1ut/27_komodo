@@ -258,6 +258,7 @@ svg { width: 20px; height: 20px; display: block; }
 .card-footer { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .card-footer strong { font-size: 14px; }
 .card-footer strong small { color: var(--muted); font-size: 10px; font-weight: 400; }
+.card-body > .payment-note { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--hairline-soft); line-height: 1.55; }
 .add-button { min-width: 62px; height: 36px; padding: 0 14px; border: 1px solid var(--ink); border-radius: 9px; background: #fff; font-size: 12px; font-weight: 600; cursor: pointer; }
 .add-button:hover { background: var(--surface-soft); }
 .add-button.added { border-color: var(--primary); background: var(--primary); color: #fff; }
