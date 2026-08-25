@@ -104,7 +104,11 @@
           <div class="section-heading">
             <div><span class="section-kicker">FULL TRIP TIMELINE</span><h2>4月26日–5月10日详细行程</h2><p>从东京出发、三段住宿到返程抵达，按日期完整排列。</p></div>
           </div>
-          <div class="day-tabs" id="day-tabs" role="tablist" aria-label="按日期筛选"></div>
+          <div class="day-tabs-shell" aria-label="日期导航">
+            <button class="day-tabs-nav" type="button" data-day-scroll="-1" aria-label="查看较早日期">←</button>
+            <div class="day-tabs" id="day-tabs" role="tablist" aria-label="按日期筛选"></div>
+            <button class="day-tabs-nav" type="button" data-day-scroll="1" aria-label="查看较晚日期">→</button>
+          </div>
           <div class="timeline" id="timeline" aria-live="polite"></div>
         </section>
 
@@ -123,7 +127,7 @@
             <div><span><svg><use href="#i-bed"></use></svg>Komodo · Full-Board</span><b>IDR 14.895.000</b></div>
             <div><span><svg><use href="#i-bed"></use></svg>Sudamala Seraya · 已付</span><b>IDR 8.107.126</b></div>
           </div>
-          <div class="total-stack"><div class="total-row airfare-total"><span>往返机票 · 2人<small>2 × ¥173,750</small></span><b>¥347,500</b></div><div class="total-row"><span>已确认酒店费用<small>IDR 23.002.126 × 0.0092</small></span><b>约 ¥211,620</b></div><div class="total-row"><span>Dragon Dive<small>IDR 39.937.530 · 已付 IDR 19.968.765</small></span><b>约 ¥367,425</b></div><div class="total-row grand-total"><span>暂定日元总价<small>Dragon Dive 余款需在抵达前支付</small></span><b>约 ¥926,500</b></div></div>
+          <div class="total-stack"><div class="total-row airfare-total"><span>往返机票 · 2人<small>2 × ¥173,750</small></span><b>¥347,500</b></div><div class="total-row"><span>已确认酒店费用<small>IDR 23.002.126 × 0.0092</small></span><b>约 ¥211,620</b></div><div class="total-row"><span>Dragon Dive<small>IDR 39.286.530 · 已付 IDR 19.643.265</small></span><b>约 ¥361,436</b></div><div class="total-row grand-total"><span>暂定日元总价<small>Dragon Dive 余款需在抵达前支付</small></span><b>约 ¥920,600</b></div></div>
           <button class="primary-button full" type="button" data-open-bookings>查看全部预订 <svg><use href="#i-arrow"></use></svg></button>
           <p class="summary-note"><svg><use href="#i-check"></use></svg>机票与三段住宿均已有确认文件</p>
         </aside>
@@ -164,7 +168,7 @@
             </article>
             <article class="recommendation-card">
               <div class="card-visual dive-visual"><span class="visual-badge confirmed-badge">✓ PDF 已确认</span><svg><use href="#i-wave"></use></svg><div><b>8D / 7N</b><small>KOMODO IMMERSION</small></div></div>
-              <div class="card-body"><div><span class="card-type">4/27–5/4 · 8天7晚</span><span class="booking-ref">50% PAID</span></div><h3>Dragon Dive · Komodo Immersion</h3><p>4/28–5/3 每天 Komodo Taste · 3潜；5/4退房</p><div class="card-footer"><strong>IDR 39.937.530 · 已付 50%</strong><a class="official-link" href="https://dragondivekomodo.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a></div><p class="payment-note">已付 IDR 19.968.765；余款 IDR 19.968.765 须在抵达前支付。</p></div>
+              <div class="card-body"><div><span class="card-type">4/27–5/4 · 8天7晚</span><span class="booking-ref">50% PAID</span></div><h3>Dragon Dive · Komodo Immersion</h3><p>2人 · Deluxe Double First Floor · 6天潜水 · 公园费已含</p><div class="card-footer"><strong>IDR 39.286.530 · 已付 50%</strong><a class="official-link" href="https://dragondivekomodo.com/" target="_blank" rel="noopener noreferrer">官网 ↗</a></div><p class="payment-note">已付 IDR 19.643.265；余款 IDR 19.643.265 须在抵达前支付。</p></div>
             </article>
             <article class="recommendation-card" id="stays">
               <div class="card-visual resort-confirmed-visual"><span class="visual-badge confirmed-badge">✓ 预订已确认</span><svg><use href="#i-bed"></use></svg><div><b>HILLTOP SUNSET</b><small>FULL-BOARD · 3 NIGHTS</small></div></div>
@@ -179,12 +183,12 @@
       </section>
 
       <section class="trip-notes" id="trip-notes">
-        <div class="page-width notes-grid"><div><span class="section-kicker">BEFORE DEPARTURE</span><h2>出发前事项</h2><p>最新确认邮件中需要提前完成的事项。</p></div><article><span>01</span><div><b>Dragon Dive余款</b><p>已付50%；剩余 IDR 19.968.765 须在抵达前支付，并完成潜水资料。</p></div></article><article><span>02</span><div><b>Sudamala船班</b><p>确认5月7日上岛船班及5月9日早班离岛；定时船与机场接送已包含。</p></div></article><article><span>03</span><div><b>暂定总价</b><p>机票2人 ¥347,500；酒店 IDR 23.002.126；Dragon Dive IDR 39.937.530。</p></div></article></div>
+        <div class="page-width notes-grid"><div><span class="section-kicker">BEFORE DEPARTURE</span><h2>出发前事项</h2><p>最新确认邮件中需要提前完成的事项。</p></div><article><span>01</span><div><b>Dragon Dive余款</b><p>已付50%；剩余 IDR 19.643.265 须在抵达前支付，并完成潜水资料。</p></div></article><article><span>02</span><div><b>Sudamala船班</b><p>确认5月7日上岛船班及5月9日早班离岛；定时船与机场接送已包含。</p></div></article><article><span>03</span><div><b>暂定总价</b><p>机票2人 ¥347,500；酒店 IDR 23.002.126；Dragon Dive IDR 39.286.530。</p></div></article></div>
       </section>
     </main>
 
     <div class="mobile-checkout" aria-label="移动端行程总计">
-      <div><small>暂定日元总价</small><b>约 ¥926,500</b></div>
+      <div><small>暂定日元总价</small><b>约 ¥920,600</b></div>
       <button type="button" data-open-bookings>预订清单</button>
     </div>
 
@@ -199,7 +203,7 @@
         <span class="section-kicker">LATEST CONFIRMATIONS</span>
         <h2>旅行预订汇总</h2>
         <p>2027年4月26日 — 5月10日 · 2 位持证潜水员</p>
-        <div class="booking-detail-list"><div><svg><use href="#i-plane"></use></svg><span><b>SQ631 + SQ8452</b><small>4/26 08:55 HND → 4/27 17:30 LBJ</small></span><em>去程</em></div><div><svg><use href="#i-plane"></use></svg><span><b>SQ8659 + SQ636</b><small>5/9 16:55 LBJ → 5/10 06:45 HND</small></span><em>返程</em></div><div><svg><use href="#i-wave"></use></svg><span><b>8D/7N Komodo Immersion</b><small>4/27–5/4 · IDR 39.937.530 · 已付50%</small></span><em>5/4退房</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Komodo Resort</b><small>5/4当天入住 · Hilltop Sunset · IDR 14.895.000</small></span><em>已确认</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Sudamala Resort Seraya</b><small>5/7–5/9 · Beach Bungalow · IDR 8.107.126</small></span><em>已付款</em></div><div><svg><use href="#i-ticket"></use></svg><span><b>暂定日元总价</b><small>按 1 IDR ≈ ¥0.0092；Dragon余款抵达前支付</small></span><em>约 ¥926,500</em></div></div>
+        <div class="booking-detail-list"><div><svg><use href="#i-plane"></use></svg><span><b>SQ631 + SQ8452</b><small>4/26 08:55 HND → 4/27 17:30 LBJ</small></span><em>去程</em></div><div><svg><use href="#i-plane"></use></svg><span><b>SQ8659 + SQ636</b><small>5/9 16:55 LBJ → 5/10 06:45 HND</small></span><em>返程</em></div><div><svg><use href="#i-wave"></use></svg><span><b>8D/7N Komodo Immersion</b><small>4/27–5/4 · IDR 39.286.530 · 已付50%</small></span><em>5/4退房</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Komodo Resort</b><small>5/4当天入住 · Hilltop Sunset · IDR 14.895.000</small></span><em>已确认</em></div><div><svg><use href="#i-bed"></use></svg><span><b>Sudamala Resort Seraya</b><small>5/7–5/9 · Beach Bungalow · IDR 8.107.126</small></span><em>已付款</em></div><div><svg><use href="#i-ticket"></use></svg><span><b>暂定日元总价</b><small>按 1 IDR ≈ ¥0.0092；Dragon余款抵达前支付</small></span><em>约 ¥920,600</em></div></div>
         <button class="primary-button full booking-done" type="button">返回行程</button>
       </div>
     </dialog>

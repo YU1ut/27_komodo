@@ -69,8 +69,20 @@ function icon(name) {
 
 function renderDayTabs() {
   const tabs = document.querySelector("#day-tabs");
-  tabs.innerHTML = `<button class="day-tab ${state.selectedDay === "all" ? "active" : ""}" type="button" data-day="all" role="tab"><b>全部</b><small>15 天</small></button>` + itinerary.map(item => `
-    <button class="day-tab ${state.selectedDay === item.day ? "active" : ""}" type="button" data-day="${item.day}" role="tab"><b>Day ${item.day}</b><small>${item.date}</small></button>`).join("");
+  tabs.innerHTML = `<button class="day-tab ${state.selectedDay === "all" ? "active" : ""}" type="button" data-day="all" role="tab" aria-selected="${state.selectedDay === "all"}"><b>全部</b><small>15 天</small></button>` + itinerary.map(item => `
+    <button class="day-tab ${state.selectedDay === item.day ? "active" : ""}" type="button" data-day="${item.day}" role="tab" aria-selected="${state.selectedDay === item.day}"><b>Day ${item.day}</b><small>${item.date}</small></button>`).join("");
+  requestAnimationFrame(() => {
+    const activeTab = tabs.querySelector(".day-tab.active");
+    if (activeTab) tabs.scrollTo({ left: activeTab.offsetLeft - (tabs.clientWidth - activeTab.offsetWidth) / 2, behavior: "smooth" });
+    updateDayTabControls();
+  });
+}
+
+function updateDayTabControls() {
+  const tabs = document.querySelector("#day-tabs");
+  const maxScroll = Math.max(0, tabs.scrollWidth - tabs.clientWidth);
+  document.querySelector('[data-day-scroll="-1"]').disabled = tabs.scrollLeft <= 2;
+  document.querySelector('[data-day-scroll="1"]').disabled = tabs.scrollLeft >= maxScroll - 2;
 }
 
 function renderTimeline() {
@@ -87,6 +99,12 @@ function renderTimeline() {
 }
 
 document.addEventListener("click", event => {
+  const dayScrollButton = event.target.closest("[data-day-scroll]");
+  if (dayScrollButton) {
+    const tabs = document.querySelector("#day-tabs");
+    tabs.scrollTo({ left: tabs.scrollLeft + Number(dayScrollButton.dataset.dayScroll) * Math.max(240, tabs.clientWidth * 0.75), behavior: "smooth" });
+    return;
+  }
   const dayButton = event.target.closest("[data-day]");
   if (dayButton) {
     state.selectedDay = dayButton.dataset.day === "all" ? "all" : Number(dayButton.dataset.day);
@@ -100,6 +118,8 @@ document.addEventListener("click", event => {
 document.querySelector(".booking-close").addEventListener("click", () => document.querySelector("#booking-dialog").close());
 document.querySelector(".booking-done").addEventListener("click", () => document.querySelector("#booking-dialog").close());
 document.querySelectorAll("dialog").forEach(dialog => dialog.addEventListener("click", event => { if (event.target === dialog) dialog.close(); }));
+document.querySelector("#day-tabs").addEventListener("scroll", updateDayTabControls, { passive: true });
+window.addEventListener("resize", updateDayTabControls);
 
 renderDayTabs();
 renderTimeline();
