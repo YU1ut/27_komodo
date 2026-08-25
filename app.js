@@ -12,11 +12,11 @@ const itinerary = [
     ["plane", "08:55", "SQ631 从羽田机场 T3 起飞", "Boeing 777-300ER · 高级经济舱 · 飞行7小时05分"],
     ["plane", "15:00", "抵达新加坡樟宜机场", "过夜转机23小时10分；电子票未包含新加坡住宿"]
   ], tags: ["SQ631", "Premium Economy", "35kg行李"] },
-  { day: 2, date: "4月27日", week: "周二", title: "抵达拉布安巴焦 · Dragon Dive入住", subtitle: "SQ8452 · Singapore SIN → Labuan Bajo LBJ", status: "已确认", url: officialSites.dragon, activities: [
+  { day: 2, date: "4月27日", week: "周二", title: "抵达拉布安巴焦 · Dragon Dive入住", subtitle: "8D/7N Komodo Immersion · SQ8452 抵达", status: "已确认", url: officialSites.dragon, activities: [
     ["plane", "14:10", "SQ8452 从樟宜机场 T1 起飞", "Scoot执飞 · Embraer 190-E2 · 经济舱 · 飞行3小时20分"],
     ["plane", "17:30", "抵达科莫多国际机场 LBJ", "Dragon Dive 距机场约5分钟车程；邮件建议抵达层乘出租车"],
-    ["bed", "抵达后", "Dragon Dive Komodo 入住", "确认入住自14:00起"]
-  ], tags: ["SQ8452", "Dragon Dive confirmed", "入住自14:00"] },
+    ["bed", "抵达后", "Dragon Dive Komodo 入住", "8D/7N Komodo Immersion 套餐开始；入住自14:00起"]
+  ], tags: ["8D/7N Komodo Immersion", "SQ8452", "入住自14:00"] },
   ...diveDates.map((date, index) => ({
     day: index + 3,
     date,
@@ -31,10 +31,10 @@ const itinerary = [
     ],
     tags: ["Komodo Taste", "3潜", "Qing + Sandra"]
   })),
-  { day: 9, date: "5月4日", week: "周二", title: "Dragon Dive退房 · Komodo Resort入住", subtitle: "Dragon Dive Komodo → Komodo Resort", status: "两项已确认", url: officialSites.komodo, activities: [
-    ["bed", "12:00前", "Dragon Dive Komodo 退房", "出发日无潜水活动"],
-    ["bed", "待协调", "入住 Komodo Resort", "Hilltop Sunset · Full-Board · 确认页显示入住自06:00"]
-  ], tags: ["Hilltop Sunset", "Full-Board", "IDR 14.895.000"] },
+  { day: 9, date: "5月4日", week: "周二", title: "Dragon Dive退房 · Komodo Resort入住", subtitle: "8D/7N Komodo Immersion 结束 → Komodo Resort", status: "两项已确认", url: officialSites.komodo, activities: [
+    ["bed", "12:00前", "Dragon Dive Komodo 退房", "8D/7N Komodo Immersion 套餐结束；当日无潜水活动"],
+    ["bed", "待协调", "当天入住 Komodo Resort", "Hilltop Sunset · Full-Board · 确认页显示入住自06:00"]
+  ], tags: ["5/4 退房+入住", "Hilltop Sunset", "Full-Board"] },
   { day: 10, date: "5月5日", week: "周三", title: "Komodo Resort · 第2天", subtitle: "Hilltop Sunset · Full-Board", status: "预订确认", url: officialSites.komodo, activities: [
     ["bed", "全天", "Komodo Resort 住宿", "Full-Board；具体活动未在确认图片中列出"]
   ], tags: ["Komodo Resort", "Full-Board", "自由安排"] },
