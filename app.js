@@ -34,13 +34,13 @@ const itinerary = [
   { day: 9, date: "5月4日", week: "周二", title: "Dragon Dive退房 · Komodo Resort入住", subtitle: "8D/7N Komodo Immersion 结束 → Komodo Resort", status: "两项已确认", url: officialSites.komodo, activities: [
     ["bed", "12:00前", "Dragon Dive Komodo 退房", "8D/7N Komodo Immersion 套餐结束；当日无潜水活动"],
     ["bed", "待协调", "当天入住 Komodo Resort", "Hilltop Sunset · Full-Board · 确认页显示入住自06:00"]
-  ], tags: ["5/4 退房+入住", "Hilltop Sunset", "Full-Board"] },
-  { day: 10, date: "5月5日", week: "周三", title: "Komodo Resort · 第2天", subtitle: "Hilltop Sunset · Full-Board", status: "预订确认", url: officialSites.komodo, activities: [
+  ], tags: ["5/4 退房+入住", "Komodo已付款", "Full-Board"] },
+  { day: 10, date: "5月5日", week: "周三", title: "Komodo Resort · 第2天", subtitle: "Hilltop Sunset · Full-Board", status: "已付款", url: officialSites.komodo, activities: [
     ["bed", "全天", "Komodo Resort 住宿", "Full-Board；具体活动未在确认图片中列出"]
-  ], tags: ["Komodo Resort", "Full-Board", "自由安排"] },
-  { day: 11, date: "5月6日", week: "周四", title: "Komodo Resort · 第3天", subtitle: "Hilltop Sunset · Full-Board", status: "预订确认", url: officialSites.komodo, activities: [
+  ], tags: ["Komodo已付款", "Full-Board", "自由安排"] },
+  { day: 11, date: "5月6日", week: "周四", title: "Komodo Resort · 第3天", subtitle: "Hilltop Sunset · Full-Board", status: "已付款", url: officialSites.komodo, activities: [
     ["bed", "全天", "Komodo Resort 住宿", "Full-Board；具体活动未在确认图片中列出"]
-  ], tags: ["Komodo Resort", "Full-Board", "自由安排"] },
+  ], tags: ["Komodo已付款", "Full-Board", "自由安排"] },
   { day: 12, date: "5月7日", week: "周五", title: "转往 Sudamala Resort Seraya", subtitle: "Komodo Resort → KP3 Harbor → Seraya Island", status: "两项已确认", url: officialSites.sudamala, activities: [
     ["bed", "确认页显示03:00", "Komodo Resort 退房", "确认图片日期为5月7日；请向酒店复核03:00的时制含义"],
     ["bed", "15:00起", "Sudamala Resort Seraya 入住", "Beach Bungalow · Bed & Breakfast"],
@@ -97,6 +97,24 @@ function renderTimeline() {
       </div>
     </article>`).join("");
 }
+
+const todoStorageKey = "komodo-plan-todos-v1";
+const todoInputs = document.querySelectorAll("[data-todo]");
+try {
+  const savedTodos = JSON.parse(localStorage.getItem(todoStorageKey) || "{}");
+  todoInputs.forEach(input => { input.checked = savedTodos[input.dataset.todo] === true; });
+} catch (_) {
+  // The checklist still works for this visit when browser storage is unavailable.
+}
+todoInputs.forEach(input => input.addEventListener("change", () => {
+  try {
+    const savedTodos = JSON.parse(localStorage.getItem(todoStorageKey) || "{}");
+    savedTodos[input.dataset.todo] = input.checked;
+    localStorage.setItem(todoStorageKey, JSON.stringify(savedTodos));
+  } catch (_) {
+    // Keep the visible checkbox state even if it cannot be saved.
+  }
+}));
 
 document.addEventListener("click", event => {
   const dayScrollButton = event.target.closest("[data-day-scroll]");
